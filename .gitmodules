@@ -1,0 +1,45 @@
+[submodule ".vim/bundle/pathogen"]
+	path = .vim/bundle/pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule ".vim/bundle/closetag"]
+	path = .vim/bundle/closetag
+	url = git://github.com/docunext/closetag.vim.git
+[submodule ".vim/bundle/delimitMate"]
+	path = .vim/bundle/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
+[submodule ".vim/bundle/inkpot"]
+	path = .vim/bundle/inkpot
+	url = git://github.com/ciaranm/inkpot.git
+[submodule ".vim/bundle/molokai"]
+	path = .vim/bundle/molokai
+	url = git://github.com/tomasr/molokai.git
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/git"]
+	path = .vim/bundle/git
+	url = git://github.com/tpope/vim-git.git
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/markdown"]
+	path = .vim/bundle/markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule ".vim/bundle/coffee-script"]
+	path = .vim/bundle/coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/haml"]
+	path = .vim/bundle/haml
+	url = git://github.com/tpope/vim-haml.git
+[submodule ".vim/bundle/scss"]
+	path = .vim/bundle/scss
+	url = git://github.com/cakebaker/scss-syntax.vim.git
+[submodule ".vim/bundle/wombat"]
+	path = .vim/bundle/wombat
+	url = git://github.com/cschlueter/vim-wombat.git
+[submodule ".vim/bundle/taglist-plus"]
+	path = .vim/bundle/taglist-plus
+	url = git://github.com/klen/vim-taglist-plus.git
