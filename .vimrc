@@ -69,6 +69,8 @@ set shortmess+=I    " don't give the intro message when starting Vim
 
 set nofoldenable    " disable (automatic) code folding
 
+set pastetoggle=<F2>     " turn on 'paste mode' with <F2> key
+
 
 if version > 730
     "set relativenumber  " changes Vim’s line number column to display how far away each line is from the current one
