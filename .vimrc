@@ -102,6 +102,11 @@ set formatoptions=ql
 
 noremap <C-l> :nohlsearch <CR>
 
+noremap <Leader>a ggVG  " select all
+noremap <Leader>x "+x   " cut
+noremap <Leader>y "+y   " copy
+noremap <Leader>p "+gP  " paste
+
 function Spellcheck()
     if !exists("b:spell")
         let b:spell = 0
@@ -116,5 +121,4 @@ function Spellcheck()
     endif
 endfunction
 
-noremap <Leader>s :call Spellcheck()<CR>
-
+noremap <Leader>s :call Spellcheck()<CR>  " toggle spellcheck
