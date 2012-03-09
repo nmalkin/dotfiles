@@ -12,7 +12,7 @@ set history=10
 set followhints=1
 
 set hlfind        
-noremap <C-l> :nohlfind <CR>
+nmap <C-l> :nohlfind <CR>
 
 set incfind      
 
