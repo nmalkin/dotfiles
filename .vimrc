@@ -1,14 +1,6 @@
 "
 " ~/.vimrc
 "
-" This is your Vim initialization file. It is read on Vim startup.
-"
-" Change this file to customize your Vim settings.
-" 
-" Vim treats lines beginning with " as comments.
-"
-" EXAMPLES are available in /usr/local/doc/startups.
-"
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -18,14 +10,12 @@ set nocompatible
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-" allow backspacing over everything in insert mode
+" Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
+" Enables syntax highlighting by default.
 syntax on
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
+" Using a dark background within the editing area and syntax highlighting
 set background=dark
 
 " Have Vim jump to the last position when reopening a file
@@ -34,18 +24,20 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-" Have Vim load indentation rules according to the detected filetype. Per
-" default Debian Vim only load filetype specific plugins.
+" Have Vim load indentation rules according to the detected filetype.
 if has("autocmd")
   filetype indent on
 endif
 
 set showcmd            " Show (partial) command in status line.
 set showmatch          " Show matching brackets.
+
 set ignorecase         " Do case insensitive matching
 set smartcase          " Do smart case matching
 set incsearch          " Incremental search
 set hlsearch           " Highlight all search matches
+set gdefault           " Apply substitutions globally on lines
+
 set autowrite          " Automatically save before commands like :next and :make
 set hidden             " Hide buffers when they are abandoned
 set mouse=a            " Enable mouse usage (all modes) in terminals
@@ -73,12 +65,9 @@ set pastetoggle=<F2>     " turn on 'paste mode' with <F2> key
 
 
 if version > 730
-    "set relativenumber  " changes Vim’s line number column to display how far away each line is from the current one
-    "set undofile        " tells Vim to create <FILENAME>.un~ files so you can undo previous actions even after you close and reopen a file.
     set colorcolumn=80   " display rule 80 characters in
 endif
 
-set gdefault        " applies substitutions globally on lines
 
 filetype plugin indent on
 
@@ -92,12 +81,6 @@ inoremap jj <Esc>
 nnoremap ; :
 nnoremap : ;
 
-"set formatoptions-=tcro
-"set formatoptions-=t
-"set formatoptions-=c
-"set formatoptions-=r
-"set formatoptions-=o
-"set formatoptions+=l
 set formatoptions=ql
 
 noremap <C-l> :nohlsearch <CR>
