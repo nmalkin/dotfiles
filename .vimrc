@@ -74,7 +74,7 @@ filetype plugin indent on
 if has('gui_running')
     colorscheme solarized 
 else
-    "colorscheme evening
+    colorscheme default
 endif
 
 inoremap jj <Esc>
