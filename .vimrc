@@ -78,6 +78,7 @@ else
 endif
 
 inoremap jj <Esc>
+inoremap jk <Esc>
 nnoremap ; :
 nnoremap : ;
 
