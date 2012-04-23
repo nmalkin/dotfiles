@@ -63,6 +63,8 @@ set nofoldenable    " disable (automatic) code folding
 
 set pastetoggle=<F2>     " turn on 'paste mode' with <F2> key
 
+set autochdir       " change current directory to currently opened file
+
 
 if version > 730
     set colorcolumn=80   " display rule 80 characters in
