@@ -110,3 +110,19 @@ function Spellcheck()
 endfunction
 
 noremap <Leader>s :call Spellcheck()<CR>  " toggle spellcheck
+
+function ToggleRnu()
+    if !exists("b:rnu")
+        let b:rnu = 1
+    endif
+
+    if b:rnu == 1
+        setlocal nu
+        let b:rnu = 0
+    else
+        setlocal rnu
+        let b:rnu = 1
+    endif
+endfunction
+
+noremap <Leader>r :call ToggleRnu()<CR>
