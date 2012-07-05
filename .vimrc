@@ -76,6 +76,7 @@ filetype plugin indent on
 
 if has('gui_running')
     colorscheme solarized 
+    set guioptions-=T   " disable toolbar
 else
     colorscheme default
 endif
