@@ -42,8 +42,6 @@ set autowrite          " Automatically save before commands like :next and :make
 set hidden             " Hide buffers when they are abandoned
 set mouse=a            " Enable mouse usage (all modes) in terminals
 
-set number          " line numbers
-
 set expandtab       " tabs to spaces
 set tabstop=4       " tab=4 spaces
 set shiftwidth=4    " indent with 4 spaces
@@ -68,6 +66,9 @@ set autochdir       " change current directory to currently opened file
 
 if version > 703
     set colorcolumn=80   " display rule 80 characters in
+    set relativenumber   " use relative line numbers
+else
+    set number           " line numbers
 endif
 
 
