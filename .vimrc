@@ -64,7 +64,7 @@ set pastetoggle=<F2>     " turn on 'paste mode' with <F2> key
 set autochdir       " change current directory to currently opened file
 
 
-if version > 703
+if version >= 703
     set colorcolumn=80   " display rule 80 characters in
     set relativenumber   " use relative line numbers
 else
