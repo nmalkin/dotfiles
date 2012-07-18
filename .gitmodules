@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/cscope"]
 	path = .vim/bundle/cscope
 	url = git://github.com/vim-scripts/cscope_macros.vim.git
+[submodule ".vim/bundle/jade"]
+	path = .vim/bundle/jade
+	url = git://github.com/digitaltoad/vim-jade.git
