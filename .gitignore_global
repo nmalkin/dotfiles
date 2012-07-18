@@ -48,6 +48,6 @@ Thumbs.db
 *.swp
 *~
 
-# Other fiels #
+# Other files #
 ###############
 .nodemonignore
