@@ -1,16 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 git submodule init
 git submodule update
 
-mv -i ~/.vimrc ~/.vimrc.bak
-mv -i ~/.vim ~/.vim.bak
-mv -i ~/.pentadactylrc ~/.pentadactylrc.bak
-mv -i ~/.gitconfig ~/.gitconfig.bak
-mv -i ~/.gitignore_global ~/.gitignore_global.bak
+dotfiles=( .vimrc .vim .pentadactylrc .gitconfig .gitignore_global .vimperatorrc )
 
-ln -s $PWD/.vimrc ~/.vimrc
-ln -s $PWD/.vim ~/.vim
-ln -s $PWD/.pentadactylrc ~/.pentadactylrc 
-ln -s $PWD/.gitconfig ~/.gitconfig
-ln -s $PWD/.gitignore_global ~/.gitignore_global
+for file in ${dotfiles[@]}
+do
+    mv -i ~/$file ~/$file.bak
+    ln -s $PWD/$file ~/$file
+done
