@@ -1,0 +1,3 @@
+set titlestring="Mozilla Firefox"
+set ds=g
+cnoremap jk <Esc>
