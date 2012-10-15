@@ -128,3 +128,5 @@ function ToggleRnu()
 endfunction
 
 noremap <Leader>r :call ToggleRnu()<CR>
+
+noremap <Leader>m :set syntax=markdown<CR>
