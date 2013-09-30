@@ -1,3 +1,0 @@
-set titlestring=""
-set ds=g
-cnoremap jk <Esc>

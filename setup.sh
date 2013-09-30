@@ -3,7 +3,7 @@
 git submodule init
 git submodule update
 
-dotfiles=( .vimrc .vim .pentadactylrc .gitconfig .gitignore_global .vimperatorrc )
+dotfiles=( .vimrc .vim .gitconfig .gitignore_global )
 
 for file in ${dotfiles[@]}
 do
