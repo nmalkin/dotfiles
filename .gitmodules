@@ -40,9 +40,6 @@
 [submodule ".vim/bundle/wombat"]
 	path = .vim/bundle/wombat
 	url = git://github.com/cschlueter/vim-wombat.git
-[submodule ".vim/bundle/taglist-plus"]
-	path = .vim/bundle/taglist-plus
-	url = git://github.com/klen/vim-taglist-plus.git
 [submodule ".vim/bundle/cscope"]
 	path = .vim/bundle/cscope
 	url = git://github.com/vim-scripts/cscope_macros.vim.git
