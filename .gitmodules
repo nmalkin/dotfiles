@@ -55,3 +55,12 @@
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/distinguished"]
+	path = .vim/bundle/distinguished
+	url = https://github.com/Lokaltog/vim-distinguished.git
+[submodule ".vim/bundle/mako"]
+	path = .vim/bundle/mako
+	url = https://github.com/sophacles/vim-bundle-mako.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
