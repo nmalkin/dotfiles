@@ -132,3 +132,6 @@ noremap <Leader>r :call ToggleRnu()<CR>
 noremap <Leader>m :set syntax=markdown<CR>
 
 noremap <Leader>t :NERDTreeToggle<CR>
+
+noremap <Leader>g :TagbarToggle<CR>
+
