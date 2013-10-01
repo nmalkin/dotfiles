@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule ".vim/bundle/protobuf"]
+	path = .vim/bundle/protobuf
+	url = https://github.com/eventualbuddha/vim-protobuf.git
