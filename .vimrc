@@ -76,6 +76,7 @@ endif
 
 filetype plugin indent on
 
+" set colorscheme
 if has('gui_running')
     colorscheme solarized 
     set guioptions-=T   " disable toolbar
@@ -83,13 +84,18 @@ else
     colorscheme default
 endif
 
+" More ways to escape
 inoremap jj <Esc>
 inoremap jk <Esc>
+
+" Flip the behavior of ; and :
 nnoremap ; :
 nnoremap : ;
 
+" Disable text auto-wrap
 set formatoptions=ql
 
+" Clear highlighted search results
 noremap <C-l> :nohlsearch <CR>
 
 noremap <Leader>a ggVG  " select all
@@ -111,7 +117,8 @@ function Spellcheck()
     endif
 endfunction
 
-noremap <Leader>s :call Spellcheck()<CR>  " toggle spellcheck
+" Toggle spellcheck
+noremap <Leader>s :call Spellcheck()<CR>
 
 function ToggleRnu()
     if !exists("b:rnu")
@@ -127,6 +134,7 @@ function ToggleRnu()
     endif
 endfunction
 
+" Toggle relative line numbers
 noremap <Leader>r :call ToggleRnu()<CR>
 
 noremap <Leader>m :set syntax=markdown<CR>
@@ -134,4 +142,7 @@ noremap <Leader>m :set syntax=markdown<CR>
 noremap <Leader>t :NERDTreeToggle<CR>
 
 noremap <Leader>g :TagbarToggle<CR>
+
+" Use JavaScript syntax highlighting on JSON files
+autocmd BufNewFile,BufRead *.json setfiletype javascript
 
