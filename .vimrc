@@ -149,3 +149,9 @@ noremap <Leader>g :TagbarToggle<CR>
 " Use JavaScript syntax highlighting on JSON files
 autocmd BufNewFile,BufRead *.json setfiletype javascript
 
+" Sets the current indentation level
+function Indent(width)
+    execute "set shiftwidth=" .a:width
+    execute "set tabstop="    .a:width
+endfunction
+
