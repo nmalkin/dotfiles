@@ -103,6 +103,9 @@ noremap <Leader>x "+x   " cut
 noremap <Leader>y "+y   " copy
 noremap <Leader>p "+gP  " paste
 
+" Mac-specific copy
+noremap <Leader>c :w !pbcopy<CR>
+
 function Spellcheck()
     if !exists("b:spell")
         let b:spell = 0
