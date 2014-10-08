@@ -12,20 +12,20 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'docunext/closetag.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-scripts/cscope_macros.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-git'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'tpope/vim-markdown'
-Plugin 'tomasr/molokai'
+Plugin 'docunext/closetag.vim'
+Plugin 'eventualbuddha/vim-protobuf'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'eventualbuddha/vim-protobuf'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'majutsushi/tagbar'
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-markdown'
+Plugin 'vim-scripts/cscope_macros.vim'
 call vundle#end()
 
 filetype plugin indent on
