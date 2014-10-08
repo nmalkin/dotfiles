@@ -65,6 +65,8 @@ set autochdir       " change current directory to currently opened file
 
 set cursorline      "highlight current line
 
+set visualbell              " Turn off audible system bell
+set virtualedit=block       " Allow block selection beyond end of line
 
 if version >= 703
     set colorcolumn=80   " display rule 80 characters in
@@ -73,7 +75,6 @@ else
     set number           " line numbers
 endif
 
-
 filetype plugin indent on
 
 " set colorscheme
@@ -81,7 +82,7 @@ if has('gui_running')
     colorscheme solarized 
     set guioptions-=T   " disable toolbar
 else
-    colorscheme default
+    colorscheme molokai
 endif
 
 " More ways to escape
@@ -129,10 +130,12 @@ function ToggleRnu()
     endif
 
     if b:rnu == 1
-        setlocal nu
+        setlocal number
+        setlocal norelativenumber
         let b:rnu = 0
     else
-        setlocal rnu
+        setlocal nonumber
+        setlocal relativenumber
         let b:rnu = 1
     endif
 endfunction
@@ -140,10 +143,13 @@ endfunction
 " Toggle relative line numbers
 noremap <Leader>r :call ToggleRnu()<CR>
 
+" Quickly enable Markdown syntax higlighting
 noremap <Leader>m :set syntax=markdown<CR>
 
+" Toggle NERDTree sidebar
 noremap <Leader>t :NERDTreeToggle<CR>
 
+" Toggle Tagbar sidebar
 noremap <Leader>g :TagbarToggle<CR>
 
 " Use JavaScript syntax highlighting on JSON files
@@ -155,3 +161,9 @@ function Indent(width)
     execute "set tabstop="    .a:width
 endfunction
 
+" Ignore common non-project files when looking for files
+" (specifically applies to ctrl-p plugin)
+set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*
+
+" Shortcut for reloading Clojure modules (works with vim-fireplace)
+noremap <Leader>e :Require<CR>
