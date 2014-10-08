@@ -6,9 +6,36 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Load and call Pathogen
-source ~/.vim/bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" Initialize Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+" Plugins
+Plugin 'docunext/closetag.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-scripts/cscope_macros.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-haml'
+Plugin 'ciaranm/inkpot'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'sophacles/vim-bundle-mako'
+Plugin 'tpope/vim-markdown'
+Plugin 'tomasr/molokai'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'eventualbuddha/vim-protobuf'
+Plugin 'wlangstroth/vim-racket'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'majutsushi/tagbar'
+Plugin 'cschlueter/vim-wombat'
+call vundle#end()
+
+filetype plugin indent on
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -22,11 +49,6 @@ set background=dark
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
-endif
-
-" Have Vim load indentation rules according to the detected filetype.
-if has("autocmd")
-  filetype indent on
 endif
 
 set showcmd            " Show (partial) command in status line.
@@ -74,8 +96,6 @@ if version >= 703
 else
     set number           " line numbers
 endif
-
-filetype plugin indent on
 
 " set colorscheme
 if has('gui_running')
