@@ -7,6 +7,7 @@
 set nocompatible
 
 " Initialize Vundle
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -14,6 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 " Plugins
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'amdt/vim-niji'
+Plugin 'bling/vim-airline'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'docunext/closetag.vim'
 Plugin 'eventualbuddha/vim-protobuf'
@@ -22,6 +24,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'mileszs/ack.vim'
 Plugin 'raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
