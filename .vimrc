@@ -82,7 +82,8 @@ set textwidth=0
 
 set shortmess+=I    " don't give the intro message when starting Vim
 
-set nofoldenable    " disable (automatic) code folding
+set foldmethod=syntax   " create folds based on syntax when possible
+set nofoldenable        " open all folds by default
 
 set pastetoggle=<F2>     " turn on 'paste mode' with <F2> key
 
