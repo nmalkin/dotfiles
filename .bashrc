@@ -4,6 +4,9 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
+# Enable colors in tmux (for vim)
+alias tmux='TERM=screen-256color-bce tmux'
+
 alias e='vim'
 alias v='vim -R'
 alias l='less'
