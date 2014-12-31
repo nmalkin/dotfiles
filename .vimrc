@@ -176,6 +176,9 @@ noremap <Leader>t :NERDTreeToggle<CR>
 " Toggle Tagbar sidebar
 noremap <Leader>g :TagbarToggle<CR>
 
+" Shortcut for CtrlP + ctags
+noremap <Leader>o :CtrlPTag<CR>
+
 " Use JavaScript syntax highlighting on JSON files
 autocmd BufNewFile,BufRead *.json setfiletype javascript
 
@@ -191,3 +194,11 @@ set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*
 
 " Shortcut for reloading Clojure modules (works with vim-fireplace)
 noremap <Leader>e :Require<CR>
+
+" Higlight extra whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+" Keep text selected when in/outdenting
+vmap > >gv
+vmap < <gv
