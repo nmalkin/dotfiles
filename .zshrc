@@ -19,7 +19,6 @@ alias epoch='date +"%s"'
 alias l='less'
 
 # Mac-specific
-alias f='~/ff'
 alias tmux='TERM=screen-256color-bce tmux'
 
 # Find files by name
@@ -38,6 +37,9 @@ function up {
 # Pipe ack output into less
 function lack() {
     ack "$1" | less -R
+}
+function lag() {
+    ag "$1" | less -R
 }
 
 # Make delete key actually forward-delete
