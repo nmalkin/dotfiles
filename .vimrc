@@ -6,40 +6,6 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Initialize Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-
-" Plugins
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'amdt/vim-niji'
-Plugin 'bling/vim-airline'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'docunext/closetag.vim'
-Plugin 'eventualbuddha/vim-protobuf'
-Plugin 'fatih/vim-go'
-Plugin 'guns/vim-clojure-static'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'mileszs/ack.vim'
-Plugin 'raimondi/delimitMate'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'stephpy/vim-yaml'
-Plugin 'tomasr/molokai'
-Plugin 'tpope/vim-classpath'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/cscope_macros.vim'
-call vundle#end()
-
-filetype plugin indent on
-
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -72,7 +38,7 @@ set tabstop=4       " tab=4 spaces
 set shiftwidth=4    " indent with 4 spaces
 
 set wrap        " lines longer than the width of the window will wrap
-set linebreak   " wrap long lines at a character in 'breakat' 
+set linebreak   " wrap long lines at a character in 'breakat'
 set wildmode=longest,list,full " file auto-completion
 
 set autoindent
@@ -101,13 +67,8 @@ else
     set number           " line numbers
 endif
 
-" set colorscheme
-if has('gui_running')
-    colorscheme solarized 
-    set guioptions-=T   " disable toolbar
-else
-    colorscheme molokai
-endif
+" Disable text auto-wrap
+set formatoptions=ql
 
 " More ways to escape
 inoremap jj <Esc>
@@ -117,12 +78,13 @@ inoremap jk <Esc>
 nnoremap ; :
 nnoremap : ;
 
-" Disable text auto-wrap
-set formatoptions=ql
-
 " Clear highlighted search results
 noremap <C-l> :nohlsearch <CR>
 
+" New tab shortcut
+noremap <C-t> :tabnew <CR>
+
+" Easier copy/paste
 noremap <Leader>a ggVG  " select all
 noremap <Leader>x "+x   " cut
 noremap <Leader>y "+y   " copy
@@ -170,15 +132,6 @@ noremap <Leader>r :call ToggleRnu()<CR>
 " Quickly enable Markdown syntax higlighting
 noremap <Leader>m :set syntax=markdown<CR>
 
-" Toggle NERDTree sidebar
-noremap <Leader>t :NERDTreeToggle<CR>
-
-" Toggle Tagbar sidebar
-noremap <Leader>g :TagbarToggle<CR>
-
-" Shortcut for CtrlP + ctags
-noremap <Leader>o :CtrlPTag<CR>
-
 " Use JavaScript syntax highlighting on JSON files
 autocmd BufNewFile,BufRead *.json setfiletype javascript
 
@@ -188,6 +141,73 @@ function Indent(width)
     execute "set tabstop="    .a:width
 endfunction
 
+" Keep text selected when in/outdenting
+vmap > >gv
+vmap < <gv
+
+
+" Initialize Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+" Plugins
+
+" Extended functionality
+Plugin 'docunext/closetag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'raimondi/delimitMate'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+
+" Themes
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+
+" Clojure
+Plugin 'amdt/vim-niji'
+Plugin 'tpope/vim-classpath'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static'
+
+" Syntax highlighting
+Plugin 'digitaltoad/vim-jade'
+Plugin 'fatih/vim-go'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-markdown'
+Plugin 'stephpy/vim-yaml'
+Plugin 'mustache/vim-mustache-handlebars'
+
+call vundle#end()
+
+filetype plugin indent on
+
+" set colorscheme
+if has('gui_running')
+    colorscheme solarized
+    set guioptions-=T   " disable toolbar
+else
+    colorscheme molokai
+endif
+
+" Higlight extra whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+" Toggle NERDTree sidebar
+noremap <Leader>t :NERDTreeToggle<CR>
+
+" Toggle Tagbar sidebar
+noremap <Leader>g :TagbarToggle<CR>
+
+" Shortcut for CtrlP + ctags
+noremap <Leader>o :CtrlPTag<CR>
+
 " Ignore common non-project files when looking for files
 " (specifically applies to ctrl-p plugin)
 set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*
@@ -195,10 +215,5 @@ set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*
 " Shortcut for reloading Clojure modules (works with vim-fireplace)
 noremap <Leader>e :Require<CR>
 
-" Higlight extra whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
 
-" Keep text selected when in/outdenting
-vmap > >gv
-vmap < <gv
+let g:airline_powerline_fonts = 1
