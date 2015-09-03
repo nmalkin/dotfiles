@@ -169,7 +169,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 
 " Clojure
-Plugin 'amdt/vim-niji'
+Plugin 'raymond-w-ko/vim-niji'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-static'
