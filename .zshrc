@@ -1,3 +1,41 @@
+### Manage history
+# Ignore duplicate history entries
+setopt histignoredups
+
+# Keep more history
+export HISTSIZE=10000
+export SAVEHIST=10000
+
+# Add commands as they are typed, don't wait until shell exit
+setopt INC_APPEND_HISTORY
+
+### Set up prompt
+# Turn on colors
+autoload -U colors && colors
+
+# Expand functions in the prompt
+setopt prompt_subst
+
+# Set prompt string
+export PS1='%{$fg_bold[green]%}%~%{$reset_color%} '
+
+### Completion
+# Enable command completion
+autoload -U compinit
+compinit
+
+# Allow completion from both ends of the cursor
+setopt completeinword
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# Show colors during completion
+zstyle ':completion:*' list-colors ''
+
+# cd by entering just the directory name
+setopt auto_cd
+
 # Use vim key bindings
 bindkey -v
 
@@ -16,7 +54,10 @@ alias cp='cp -i'
 # Shortened commands
 alias json='python -mjson.tool'
 alias epoch='date +"%s"'
+alias g='git'
 alias l='less'
+alias ls='ls -G'
+alias ll='ls -l'
 
 # Mac-specific
 alias tmux='TERM=screen-256color-bce tmux'
