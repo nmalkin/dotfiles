@@ -130,6 +130,12 @@ endfunction
 " Shortcut for toggling relative line numbers
 noremap <Leader>r :call ToggleRnu()<CR>
 
+" Enable automatic text wrapping
+function Wrap()
+    setlocal textwidth=80
+    setlocal formatoptions+=t
+endfunction
+
 " Quickly enable Markdown syntax higlighting
 noremap <Leader>m :set syntax=markdown<CR>
 
