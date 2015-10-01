@@ -92,6 +92,7 @@ noremap <Leader>p "+gP  " paste
 " Mac-specific copy
 noremap <Leader>c :w !pbcopy<CR>
 
+" Toggle spellcheck
 function Spellcheck()
     if !exists("b:spell")
         let b:spell = 0
@@ -106,9 +107,10 @@ function Spellcheck()
     endif
 endfunction
 
-" Toggle spellcheck
+" Shortcut for toggling spellcheck
 noremap <Leader>s :call Spellcheck()<CR>
 
+" Toggle relative line numbers
 function ToggleRnu()
     if !exists("b:rnu")
         let b:rnu = 1
@@ -125,7 +127,7 @@ function ToggleRnu()
     endif
 endfunction
 
-" Toggle relative line numbers
+" Shortcut for toggling relative line numbers
 noremap <Leader>r :call ToggleRnu()<CR>
 
 " Quickly enable Markdown syntax higlighting
