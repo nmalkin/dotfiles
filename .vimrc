@@ -71,8 +71,7 @@ endif
 set formatoptions=ql
 
 " More ways to escape
-inoremap jj <Esc>
-inoremap jk <Esc>
+inoremap tn <Esc>
 
 " Flip the behavior of ; and :
 nnoremap ; :
