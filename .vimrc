@@ -221,6 +221,3 @@ set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*
 
 " Shortcut for reloading Clojure modules (works with vim-fireplace)
 noremap <Leader>e :Require<CR>
-
-
-let g:airline_powerline_fonts = 1

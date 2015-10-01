@@ -102,8 +102,5 @@ bindkey '^R' history-incremental-search-backward
 export _Z_CMD=c
 source ~/dotfiles/z/z.sh
 
-# Poweline
-export POWERLINE_DIR=~/powerline
-source $POWERLINE_DIR/bindings/zsh/powerline.zsh
-
-source ~/local_aliases.sh
+# Use fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
