@@ -1,4 +1,5 @@
 ### Manage history
+HISTFILE=~/.zshistory
 # Ignore duplicate history entries
 setopt histignoredups
 
@@ -17,7 +18,7 @@ autoload -U colors && colors
 setopt prompt_subst
 
 # Set prompt string
-export PS1='%{$fg_bold[green]%}%~%{$reset_color%} '
+export PS1='%{$fg_bold[blue]%}%~%{$reset_color%} '
 
 ### Completion
 # Enable command completion
