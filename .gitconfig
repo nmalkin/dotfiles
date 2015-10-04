@@ -1,11 +1,17 @@
 [user]
 	email = nathan@nathanmalkin.com
-	name = Nathan Malkin
-[alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[color]
-	ui = true
 [core]
 	excludesfile = ~/.gitignore_global
+[alias]
+  br = branch
+  ca = commit -a
+  cb = checkout -b
+  ci = commit
+  co = checkout
+  i  = diff
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  m  = checkout master
+  pl = pull
+  st = status
 [push]
 	default = simple
