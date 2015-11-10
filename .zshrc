@@ -105,6 +105,3 @@ bindkey '^R' history-incremental-search-backward
 # z.sh
 export _Z_CMD=c
 source ~/dotfiles/z/z.sh
-
-# Use fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
