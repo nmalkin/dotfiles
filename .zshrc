@@ -21,6 +21,9 @@ setopt prompt_subst
 export PS1='%{$fg_bold[blue]%}%~%{$reset_color%} '
 
 ### Completion
+# Set path for completion files
+fpath=(~/.zsh/completion $fpath)
+
 # Enable command completion
 autoload -U compinit
 compinit
