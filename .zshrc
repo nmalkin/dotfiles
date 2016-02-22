@@ -107,3 +107,10 @@ bindkey '^R' history-incremental-search-backward
 # z.sh
 export _Z_CMD=c
 source ~/dotfiles/z/z.sh
+
+# Rename tmux windows to the current directory's name
+precmd () {
+    if [ -n "$TMUX" ]; then
+        tmux rename-window "$(basename $PWD)"
+    fi
+}
