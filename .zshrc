@@ -58,6 +58,8 @@ alias cp='cp -i'
 # Shortened commands
 alias json='python -mjson.tool'
 alias epoch='date +"%s"'
+alias d='docker'
+alias dc='docker-compose'
 alias g='git'
 alias l='less'
 alias ls='ls -G'
