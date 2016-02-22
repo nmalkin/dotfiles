@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-dotfiles=( .bashrc .gitignore_global .tmux.conf .vim .vimrc .zshrc )
+dotfiles=( .gitconfig .gitignore_global .tmux.conf .vim .vimrc .zshrc )
 
 for file in ${dotfiles[@]}
 do
