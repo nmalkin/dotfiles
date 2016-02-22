@@ -18,7 +18,7 @@ autoload -U colors && colors
 setopt prompt_subst
 
 # Set prompt string
-export PS1='%{$fg_bold[blue]%}%~%{$reset_color%} '
+export PS1='%{$fg[blue]%}%*%{$reset_color%} %{$fg_bold[yellow]%}%~%{$reset_color%} '
 
 ### Completion
 # Set path for completion files
