@@ -178,10 +178,12 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 
 " Clojure
+"Plugin 'guns/vim-clojure-static'
 Plugin 'raymond-w-ko/vim-niji'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
-Plugin 'guns/vim-clojure-static'
+Plugin 'venantius/vim-cljfmt'
+Plugin 'vim-scripts/paredit.vim'
 
 " Syntax highlighting
 Plugin 'digitaltoad/vim-jade'
