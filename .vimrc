@@ -77,6 +77,8 @@ inoremap tn <Esc>
 nnoremap ; :
 nnoremap : ;
 
+let mapleader = ","
+
 " Clear highlighted search results
 noremap <C-l> :nohlsearch <CR>
 
