@@ -3,5 +3,5 @@
                   [jonase/eastwood "0.2.3"]
                   [lein-bikeshed "0.3.0"]
                   [lein-kibit "0.1.2"]
-                  [lein-ancient "0.6.9"]]
+                  [lein-ancient "0.6.10"]]
         :dependencies [[lein-cljfmt "0.5.0"]]}}

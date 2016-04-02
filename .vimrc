@@ -189,11 +189,12 @@ Plugin 'snoe/nvim-parinfer.js'
 " Syntax highlighting
 Plugin 'digitaltoad/vim-jade'
 Plugin 'fatih/vim-go'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'leafgarland/typescript-vim'
+"Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-markdown'
 Plugin 'stephpy/vim-yaml'
-Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
 
