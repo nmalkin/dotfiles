@@ -10,6 +10,7 @@
   co = checkout
   cp = cherry-pick
   i  = diff
+  iw = diff -w
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   m  = checkout master
   pl = pull
