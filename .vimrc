@@ -227,3 +227,14 @@ set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*
 
 " Shortcut for reloading Clojure modules (works with vim-fireplace)
 noremap <Leader>e :Require<CR>
+
+" Toggle Parinfer's mode
+function ToggleParinferMode()
+    if g:parinfer_mode == "indent"
+        let g:parinfer_mode = "paren"
+    else
+        let g:parinfer_mode = "indent"
+    endif
+endfunction
+
+noremap <Leader>par :call ToggleParinferMode()<CR>
