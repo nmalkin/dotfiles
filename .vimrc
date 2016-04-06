@@ -165,7 +165,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Extended functionality
 Plugin 'docunext/closetag.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'raimondi/delimitMate'
 Plugin 'scrooloose/nerdcommenter'
