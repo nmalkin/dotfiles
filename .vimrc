@@ -223,7 +223,7 @@ noremap <Leader>o :CtrlPTag<CR>
 
 " Ignore common non-project files when looking for files
 " (specifically applies to ctrl-p plugin)
-set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*
+set wildignore+=*.swp,*.pyc,*/__pycache__/*,*/.git/*,*compile*,*/target/*
 
 " Shortcut for reloading Clojure modules (works with vim-fireplace)
 noremap <Leader>e :Require<CR>
