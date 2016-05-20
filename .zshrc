@@ -65,6 +65,12 @@ alias l='less'
 alias ls='ls -G'
 alias ll='ls -l'
 
+# List directory after changing to it, via https://stackoverflow.com/a/3964198
+function chpwd() {
+    emulate -L zsh
+    ls -G
+}
+
 # Mac-specific
 alias tmux='TERM=screen-256color-bce tmux'
 
