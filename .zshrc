@@ -120,3 +120,9 @@ precmd () {
         tmux rename-window "$(basename $PWD)"
     fi
 }
+
+# fzf configuration
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_COMPLETION_TRIGGER=';'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
