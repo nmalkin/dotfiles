@@ -62,13 +62,13 @@ alias d='docker'
 alias dc='docker-compose'
 alias g='git'
 alias l='less'
-alias ls='ls -G'
+alias ls='ls --color'
 alias ll='ls -l'
 
 # List directory after changing to it, via https://stackoverflow.com/a/3964198
 function chpwd() {
     emulate -L zsh
-    ls -G
+    ls --color
 }
 
 # Mac-specific
@@ -104,8 +104,8 @@ autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search
-bindkey "^[[B" down-line-or-beginning-search
+[[ -n ${key[Up]}   ]] && bindkey "${key[Up]}"   up-line-or-beginning-search
+[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-beginning-search
 
 # Search history with ctrl+R
 bindkey '^R' history-incremental-search-backward
