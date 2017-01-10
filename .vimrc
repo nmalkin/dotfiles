@@ -182,9 +182,10 @@ Plugin 'raymond-w-ko/vim-niji'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-fireplace'
 Plugin 'venantius/vim-cljfmt'
-" Clojure - neovim-specific!
-Plugin 'neovim/node-host'
-Plugin 'snoe/nvim-parinfer.js'
+if has('nvim')
+    Plugin 'neovim/node-host'
+    Plugin 'clojure-vim/nvim-parinfer.js'
+endif
 
 " Syntax highlighting
 Plugin 'digitaltoad/vim-jade'
