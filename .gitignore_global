@@ -29,7 +29,7 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
+#*.sql
 *.sqlite
 
 # OS generated files #
@@ -48,6 +48,26 @@ Thumbs.db
 *.swp
 *~
 
+# IntelliJ #
+############
+*.iml
+.idea/*
+!.idea/codeStyleSettings.xml
+
+# Node #
+########
+.nodemonignore
+node_modules
+
+# Python #
+###############
+__pycache__
+.ipynb_checkpoints/*
+*/.ipynb_checkpoints/*
+.mypy_cache
+venv
+*.pyc
+
 # Other files #
 ###############
-.nodemonignore
+.vscode
