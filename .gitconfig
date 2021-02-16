@@ -1,5 +1,6 @@
 [user]
-	email = nathan@nathanmalkin.com
+	email =
+	name =
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
@@ -15,5 +16,8 @@
   m  = checkout master
   pl = pull
   st = status
+  statu = status
 [push]
 	default = simple
+[pull]
+	ff = only
