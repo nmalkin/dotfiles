@@ -187,6 +187,7 @@ Plugin 'neovim/node-host'
 Plugin 'snoe/nvim-parinfer.js'
 
 " Syntax highlighting
+Plugin 'cespare/vim-toml'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'fatih/vim-go'
 Plugin 'leafgarland/typescript-vim'
